@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/sofia-123/.matplotlib'
+let g:netrw_dirhist_2='/Users/sofia-123'
+let g:netrw_dirhist_3='/Users/sofia-123/.mono'
+let g:netrw_dirhist_4='/Users/sofia-123'
+let g:netrw_dirhist_5='/Users/sofia-123/pycodinglib'
+let g:netrw_dirhist_6='/Users/sofia-123/pycodinglib/graph'
+let g:netrw_dirhist_7='/Users/sofia-123/pycodinglib/CF_490_D3_py'
+let g:netrw_dirhist_8='/Users/sofia-123/PastRoutesQueries/shipments'
+let g:netrw_dirhist_9='/Users/sofia-123/pycodinglib/graph'

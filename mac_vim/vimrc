@@ -1,0 +1,44 @@
+execute pathogen#infect()
+
+set background=dark
+syntax on
+
+set ts=4
+set sts=4
+set sw=4
+set laststatus=4
+set smartindent
+set autoindent
+set number
+set smartcase
+set whichwrap+=<,>,[,]
+
+let c_no_curly_error=1
+let g:badwolf_darkgutter = 1
+let g:badwolf_tabline = 2
+colorscheme badwolf
+
+map <F2> <ESC>:w <CR>
+imap <F2> <ESC>:w <CR>
+map <C-O> :tabnew <bar> :e . <CR>
+map <C-W> :q <CR>
+imap <C-W> :q <CR>
+map <C-T> :tabnew <CR>
+
+autocmd Filetype cpp	       map <F9> <ESC>:w <bar> !g++ -std=c++11 -O2 -o %:r % && ./%:r <CR>
+autocmd Filetype cpp	       imap <F9> <ESC>:w <bar> !g++ -std=c++11 -O2 -o %:r % && ./%:r <CR>
+autocmd Filetype python        map <F9> <ESC>:w <bar> !python3 % <CR>
+autocmd Filetype python        imap <F9> <ESC>:w <bar> !python3 % <CR>
+autocmd Filetype scala         map <F9> <ESC>:w <bar> !scala % <CR>
+autocmd Filetype scala         imap <F9> <ESC>:w <bar> !scala % <CR>
+autocmd FileType python        setlocal expandtab
+autocmd Filetype cpp           nmap <Tab> mtgg=G't
+"autocmd Filetype python        set foldmethod=indent
+
+set completeopt-=preview
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
+
+source ~/.vim/cyrilic.vim
+hi StatusLine ctermbg=black ctermfg=white 
+autocmd BufNewFile  *.cpp  0r ~/.vim/skeleton.cpp
